@@ -4,6 +4,7 @@ import 'tips_page.dart';
 import 'map_page.dart';
 import 'auth/login_page.dart';
 import 'auth/profile_page.dart';
+import 'riwayat_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -20,6 +21,7 @@ class _HomePageState extends State<HomePage> {
     HomeContent(),
     TipsPage(),
     MapPage(),
+    RiwayatPage(),
   ];
 
   void _onItemTapped(int index) {
@@ -93,6 +95,9 @@ class _HomePageState extends State<HomePage> {
               icon: Icon(Icons.favorite), label: 'Tips'),
           BottomNavigationBarItem(
               icon: Icon(Icons.map), label: 'Salon'),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.history), label: 'Riwayat'),
+
         ],
       ),
     );

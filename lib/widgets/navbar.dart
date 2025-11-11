@@ -22,6 +22,7 @@ class CustomNavBar extends StatelessWidget {
         BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Beranda'),
         BottomNavigationBarItem(icon: Icon(Icons.favorite), label: 'Tips'),
         BottomNavigationBarItem(icon: Icon(Icons.map), label: 'Salon'),
+        BottomNavigationBarItem(icon: Icon(Icons.history), label: 'Riwayat'),
       ],
     );
   }

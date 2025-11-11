@@ -48,7 +48,7 @@ class TryOnPage extends StatelessWidget {
                   ),
                 ),
                 child: const Text(
-                  'Favorit',
+                  'tambah',
                   style: TextStyle(color: Colors.white, fontSize: 16),
                 ),
               ),
