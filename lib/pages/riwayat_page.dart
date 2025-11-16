@@ -14,7 +14,7 @@ class RiwayatPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Riwayat Favorit'),
-        backgroundColor: Colors.pink,
+        backgroundColor: const Color.fromARGB(255, 253, 253, 253),
       ),
       body: riwayatList.isEmpty
           ? const Center(
