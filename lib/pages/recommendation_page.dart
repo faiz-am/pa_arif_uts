@@ -6,7 +6,7 @@ class RecommendationPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final rekomendasi = List.generate(6, (i) => 'Desain Nail Art ${i + 1}');
+    final rekomendasi = List.generate(6, (i) => 'Desain Nail Art ${i + 1}'); //6item
 
     return Scaffold(
       appBar: AppBar(title: const Text('Rekomendasi Desain Kuku')),
