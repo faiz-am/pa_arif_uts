@@ -5,50 +5,56 @@ class RiwayatPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final List<Map<String, String>> riwayatList = [
-      {'title': 'Desain Nail Art 1', 'date': '10 November 2025'},
-      {'title': 'Desain Nail Art 2', 'date': '8 November 2025'},
-      {'title': 'Desain Nail Art 3', 'date': '5 November 2025'},
-    ];
-
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Riwayat Favorit'),
-        backgroundColor: const Color.fromARGB(255, 253, 253, 253),
-      ),
-      body: riwayatList.isEmpty
-          ? const Center(
-              child: Text(
-                'Belum ada riwayat favorit.',
-                style: TextStyle(fontSize: 16, color: Colors.grey),
+      backgroundColor: Colors.white, // Background putih sama dengan home
+      body: Column(
+        children: [
+          // HEADER CUSTOM (Sama seperti Home Page)
+          Container(
+            width: double.infinity,
+            padding: const EdgeInsets.only(top: 30, left: 20, right: 20, bottom: 30),
+            decoration: const BoxDecoration(
+              color: Color(0xFFAD1457), // Pink Gelap
+              borderRadius: BorderRadius.only(
+                bottomLeft: Radius.circular(30),
+                bottomRight: Radius.circular(30),
               ),
-            )
-          : ListView.builder(
-              itemCount: riwayatList.length,
-              padding: const EdgeInsets.all(16),
-              itemBuilder: (context, index) {
-                final item = riwayatList[index];
-                return Card(
-                  color: Colors.pink.shade50,
-                  margin: const EdgeInsets.symmetric(vertical: 8),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                  child: ListTile(
-                    leading: const Icon(Icons.favorite, color: Colors.pink),
-                    title: Text(
-                      item['title']!,
-                      style: const TextStyle(
-                          fontWeight: FontWeight.bold, fontSize: 16),
-                    ),
-                    subtitle: Text(
-                      'Ditambahkan pada: ${item['date']}',
-                      style: const TextStyle(fontSize: 13),
-                    ),
-                  ),
-                );
-              },
             ),
+            child: const Column(
+              crossAxisAlignment: CrossAxisAlignment.start, // Tulisan di Kiri
+              children: [
+                Text(
+                  "Riwayat Favorit",
+                  style: TextStyle(
+                    color: Colors.white, 
+                    fontSize: 24, 
+                    fontWeight: FontWeight.bold
+                  ),
+                ),
+                SizedBox(height: 5),
+                Text(
+                  "Pantau status favorit kamu",
+                  style: TextStyle(color: Colors.white70, fontSize: 14),
+                ),
+              ],
+            ),
+          ),
+
+          // ISI KONTEN
+          Expanded(
+            child: Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(Icons.history, size: 80, color: Colors.grey[300]),
+                  const SizedBox(height: 10),
+                  const Text("Belum ada riwayat transaksi", style: TextStyle(color: Colors.grey)),
+                ],
+              ),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
